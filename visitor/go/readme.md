@@ -61,53 +61,171 @@ func (obj *square) accept(v visitor){
 ####  **shape.go:** 元件
 
 ```go
+package main
+
+// 形状结构体
+type Shape interface {
+	getType() string
+	accept(Visitor)
+}
 
 ```
 
 ####  **square.go:** 具体元件
 
 ```go
+package main
+
+type Square struct {
+	side int
+}
+
+func (s *Square) accept(v Visitor) {
+	v.visitForSquare(s)
+}
+
+func (s *Square) getType() string {
+	return "Square"
+}
 
 ```
 
 ####  **circle.go:** 具体元件
 
 ```go
+package main
+
+type Circle struct {
+	radius int
+}
+
+func (c *Circle) accept(v Visitor) {
+	v.visitForCircle(c)
+}
+
+func (c *Circle) getType() string {
+	return "Circle"
+}
 
 ```
 
 ####  **rectangle.go:** 具体元件
 
 ```go
+package main
+
+type Rectangle struct {
+	l int
+	b int
+}
+
+func (t *Rectangle) accept(v Visitor) {
+	v.visitForrectangle(t)
+}
+
+func (t *Rectangle) getType() string {
+	return "rectangle"
+}
 
 ```
 
 ####  **visitor.go:** 访问者
 
 ```go
+package main
+
+type Visitor interface {
+	visitForSquare(*Square)
+	visitForCircle(*Circle)
+	visitForrectangle(*Rectangle)
+}
 
 ```
 
 ####  **areaCalculator.go:** 具体访问者
 
 ```go
+package main
+
+import "fmt"
+
+type AreaCalculator struct {
+	area int
+}
+
+func (a *AreaCalculator) visitForSquare(s *Square) {
+	fmt.Println("calculating area for square")
+}
+
+func (a *AreaCalculator) visitForCircle(s *Circle) {
+	fmt.Println("Calculating area for circle")
+}
+
+func (a *AreaCalculator) visitForrectangle(s *Rectangle) {
+	fmt.Println("Calculating area for rectangle")
+}
 
 ```
 
 ####  **middleCoordinates.go:** 具体访问者
 
 ```go
+package main
+
+import "fmt"
+
+type MiddleCoordinates struct {
+	x int
+	y int
+}
+
+func (a *MiddleCoordinates) visitForSquare(s *Square) {
+	fmt.Println("Calculating middle point coordinates for square")
+}
+
+func (a *MiddleCoordinates) visitForCircle(c *Circle) {
+	fmt.Println("Calculating middle point coordinates for circle")
+}
+func (a *MiddleCoordinates) visitForrectangle(t *Rectangle) {
+	fmt.Println("Calculating middle point coordinates for rectangle")
+}
 
 ```
 
 ####  **main.go:** 客户端代码
 
 ```go
+package main
+
+import "fmt"
+
+func main() {
+	square := &Square{side: 2}
+	circle := &Circle{radius: 3}
+	rectangle := &Rectangle{l: 2, b: 3}
+
+	areaCalculator := &AreaCalculator{}
+
+	square.accept(areaCalculator)
+	circle.accept(areaCalculator)
+	rectangle.accept(areaCalculator)
+
+	fmt.Println()
+	middleCoordinates := &MiddleCoordinates{}
+	square.accept(middleCoordinates)
+	circle.accept(middleCoordinates)
+	rectangle.accept(middleCoordinates)
+}
 
 ```
 
 ####  **output.txt:** 执行结果
 
 ```tex
+calculating area for square
+Calculating area for circle
+Calculating area for rectangle
 
+Calculating middle point coordinates for square
+Calculating middle point coordinates for circle
 ```
