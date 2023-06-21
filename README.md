@@ -1,9 +1,25 @@
 # 设计模式：design-patterns
 
-- 
-- 
-- 
-- 
-- 
-- [模板方法模式](./template-method/readme.md)
-- [访问者模式](visitor/readme.md)
+
+- [抽象工厂模式( Abstract Factory)](./abstract-factory/readme.md) 
+- [适配器模式](./adapter/readme.md) 
+- [桥接模式](./bridge/readme.md) 
+- [生成器模式](./builder/readme.md) 
+- [责任链模式](./chain_of_command/readme.md) 
+- [命令模式](./command/readme.md) 
+- [组合模式](./composite/readme.md) 
+- [装饰模式](./decorator/readme.md) 
+- [外观模式](./facade/readme.md) 
+- [工厂方法模式](./factory/readme.md) 
+- [享元模式](./flyweight/readme.md) 
+- [2023跟我学设计模式：中介者模式（Intermediary）](./intermediary/readme.md) 
+- [迭代器模式](./iterator/readme.md) 
+- [观察者模式](./observer/readme.md) 
+- [原型模式](./prototype/readme.md) 
+- [代理模式](./proxy/readme.md) 
+- [单例模式](./singleton/readme.md) 
+- [备忘录模式](./snapshot/readme.md) 
+- [状态模式](./state/readme.md) 
+- [策略模式](./strategy/readme.md) 
+- [模板方法模式](./template-method/readme.md) 
+- [访问者模式](./visitor/readme.md) 
