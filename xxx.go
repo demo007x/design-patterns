@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"path"
 	"strings"
 )
 
@@ -29,7 +30,6 @@ func visitDir(dir string, deep int) string {
 		var context []byte
 		if info.IsDir() {
 			xxx = visitDir(filePath, deep+1)
-			fmt.Println(xxx)
 		} else {
 			if strings.Index(info.Name(), ".md") > 0 {
 				// 读取 markdown 的文件的第一行
@@ -43,7 +43,9 @@ func visitDir(dir string, deep int) string {
 				context, _, _ = bf.ReadLine()
 				str := strings.Trim(string(context), "#")
 				if deep > 2 {
-					return fmt.Sprintf("\n\r- [%s](%s)", str, filePath)
+					dir, fn := path.Split(filePath)
+					dirSlice := strings.SplitAfterN(dir, "/", 3)
+					return fmt.Sprintf("\n\r- [%s](%s)", str, dirSlice[len(dirSlice)-1]+fn)
 				}
 				file.Close()
 				if deep == 2 {
