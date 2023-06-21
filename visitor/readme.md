@@ -229,3 +229,5 @@ class Application is
 - 可以同时使用[访问者](https://refactoringguru.cn/design-patterns/visitor)和[迭代器模式](https://refactoringguru.cn/design-patterns/iterator)来遍历复杂数据结构， 并对其中的元素执行所需操作， 即使这些元素所属的类完全不同。
 
 ##  代码示例
+
+- [ Go **访问者**模式讲解和代码示例](go/readme.md)

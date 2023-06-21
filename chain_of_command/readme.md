@@ -253,3 +253,4 @@ class Application is
   [责任链](https://refactoringguru.cn/design-patterns/chain-of-responsibility)的管理者可以相互独立地执行一切操作， 还可以随时停止传递请求。 另一方面， 各种*装饰*可以在遵循基本接口的情况下扩展对象的行为。 此外， 装饰无法中断请求的传递。
 
 ##  代码示例
+- [ Go **责任链**模式讲解和代码示例](golang/readme.md)

@@ -169,3 +169,5 @@ class MonstersAI extends GameAI is
 - [模板方法](https://refactoringguru.cn/design-patterns/template-method)基于继承机制： 它允许你通过扩展子类中的部分内容来改变部分算法。 [策略模式](https://refactoringguru.cn/design-patterns/strategy)基于组合机制： 你可以通过对相应行为提供不同的策略来改变对象的部分行为。 *模板方法*在类层次上运作， 因此它是静态的。 *策略*在对象层次上运作， 因此允许在运行时切换行为。
 
 ##  代码示例
+
+- [ Go **模板方法**模式讲解和代码示例](go/readme.md)

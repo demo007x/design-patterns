@@ -153,3 +153,4 @@
 - [工厂方法](https://refactoringguru.cn/design-patterns/factory-method)是[模板方法模式](https://refactoringguru.cn/design-patterns/template-method)的一种特殊形式。 同时， *工厂方法*可以作为一个大型*模板方法*中的一个步骤。
 
 ##  代码示例
+- [ Go **工厂方法**模式讲解和代码示例](golang/readme.md)

@@ -122,3 +122,4 @@
 - 大量使用[组合](https://refactoringguru.cn/design-patterns/composite)和[装饰](https://refactoringguru.cn/design-patterns/decorator)的设计通常可从对于[原型模式](https://refactoringguru.cn/design-patterns/prototype)的使用中获益。 你可以通过该模式来复制复杂结构， 而非从零开始重新构造。
 
 ##  代码示例
+- [ Go **组合**模式讲解和代码示例](golang/readme.md)

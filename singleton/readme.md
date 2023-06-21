@@ -130,3 +130,4 @@ class Application is
 
 
 ##  代码示例
+- [ Go **单例**模式讲解和代码示例](golang/readme.md)

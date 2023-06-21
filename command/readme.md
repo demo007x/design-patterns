@@ -300,3 +300,4 @@ class Application is
 - 你可以将[访问者模式](https://refactoringguru.cn/design-patterns/visitor)视为[命令模式](https://refactoringguru.cn/design-patterns/command)的加强版本， 其对象可对不同类的多种对象执行操作。
 
 ##  代码示例
+- [ Go **命令**模式讲解和代码示例](golang/readme.md)

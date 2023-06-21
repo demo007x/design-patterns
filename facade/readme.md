@@ -136,3 +136,4 @@ class Application is
 - [外观](https://refactoringguru.cn/design-patterns/facade)与[代理模式](https://refactoringguru.cn/design-patterns/proxy)的相似之处在于它们都缓存了一个复杂实体并自行对其进行初始化。 *代理*与其服务对象遵循同一接口， 使得自己和服务对象可以互换， 在这一点上它与*外观*不同。
 
 ##  代码示例
+- [ Go **外观**模式讲解和代码示例](golang/readme.md)

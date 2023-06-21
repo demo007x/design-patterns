@@ -118,3 +118,4 @@
 - [抽象工厂](https://refactoringguru.cn/design-patterns/abstract-factory)、 [生成器](https://refactoringguru.cn/design-patterns/builder)和[原型](https://refactoringguru.cn/design-patterns/prototype)都可以用[单例模式](https://refactoringguru.cn/design-patterns/singleton)来实现。
 
 ##  代码示例
+- [ Go **原型**模式讲解和代码示例](golang/readme.md)

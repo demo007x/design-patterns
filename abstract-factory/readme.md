@@ -123,3 +123,4 @@
 - 当只需对客户端代码隐藏子系统创建对象的方式时， 你可以使用[`抽象工厂`](https://refactoringguru.cn/design-patterns/abstract-factory)来代替[`外观模式`](https://refactoringguru.cn/design-patterns/facade)。
 - 你可以将[`抽象工厂`](https://refactoringguru.cn/design-patterns/abstract-factory)和[`桥接模式`](https://refactoringguru.cn/design-patterns/bridge)搭配使用。 如果由*桥接*定义的抽象只能与特定实现合作， 这一模式搭配就非常有用。 在这种情况下， *抽象工厂*可以对这些关系进行封装， 并且对客户端代码隐藏其复杂性。
 - [`抽象工厂`](https://refactoringguru.cn/design-patterns/abstract-factory)、 [生成器](https://refactoringguru.cn/design-patterns/builder)和[`原型`](https://refactoringguru.cn/design-patterns/prototype)都可以用[`单例模式`](https://refactoringguru.cn/design-patterns/singleton)来实现。
+- [ Golang **抽象工厂**模式讲解和代码示例](golang/readme.md)

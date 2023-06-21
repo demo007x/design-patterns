@@ -147,3 +147,4 @@
 
 
 ##  代码示例
+- [ Go **观察者**模式讲解和代码示例](golang/golang/readme.md)
