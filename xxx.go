@@ -42,7 +42,7 @@ func visitDir(dir string, deep int) string {
 				context, _, _ = bf.ReadLine()
 				str := strings.Trim(string(context), "#")
 				if deep > 2 {
-					return fmt.Sprintf("- [%s](%s)", str, filePath)
+					return fmt.Sprintf("\n\r- [%s](%s)", str, filePath)
 				}
 				if deep == 2 {
 					write := bufio.NewWriter(file)
