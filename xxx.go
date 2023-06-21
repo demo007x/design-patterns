@@ -29,27 +29,35 @@ func visitDir(dir string, deep int) string {
 		var context []byte
 		if info.IsDir() {
 			xxx = visitDir(filePath, deep+1)
+			fmt.Println(xxx)
 		} else {
 			if strings.Index(info.Name(), ".md") > 0 {
 				// 读取 markdown 的文件的第一行
-				file, err := os.OpenFile(filePath, os.O_WRONLY|os.O_APPEND, 0666)
+				file, err := os.OpenFile(filePath, os.O_RDONLY, 0666)
 				if err != nil {
 					fmt.Println(err.Error())
 					continue
 				}
-				defer file.Close()
+
 				bf := bufio.NewReader(file)
 				context, _, _ = bf.ReadLine()
 				str := strings.Trim(string(context), "#")
 				if deep > 2 {
 					return fmt.Sprintf("\n\r- [%s](%s)", str, filePath)
 				}
+				file.Close()
 				if deep == 2 {
+					file, err := os.OpenFile(filePath, os.O_WRONLY|os.O_APPEND, 0666)
+					if err != nil {
+						fmt.Println(err.Error())
+						continue
+					}
 					write := bufio.NewWriter(file)
 					write.WriteString(xxx)
 					if err := write.Flush(); err != nil {
 						fmt.Println(err.Error())
 					}
+					file.Close()
 					// fmt.Println(xxx)
 					// fmt.Println(filePath)
 				}
