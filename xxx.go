@@ -32,7 +32,7 @@ func visitDir(dir string, deep int) string {
 		} else {
 			if strings.Index(info.Name(), ".md") > 0 {
 				// 读取 markdown 的文件的第一行
-				file, err := os.OpenFile(filePath, os.O_RDONLY|os.O_APPEND, 0666)
+				file, err := os.OpenFile(filePath, os.O_WRONLY|os.O_APPEND, 0666)
 				if err != nil {
 					fmt.Println(err.Error())
 					continue
@@ -42,12 +42,16 @@ func visitDir(dir string, deep int) string {
 				context, _, _ = bf.ReadLine()
 				str := strings.Trim(string(context), "#")
 				if deep > 2 {
-					return fmt.Sprintf("\n\r- [%s](%s)", str, filePath)
+					return fmt.Sprintf("- [%s](%s)", str, filePath)
 				}
 				if deep == 2 {
 					write := bufio.NewWriter(file)
 					write.WriteString(xxx)
-					write.Flush()
+					if err := write.Flush(); err != nil {
+						fmt.Println(err.Error())
+					}
+					// fmt.Println(xxx)
+					// fmt.Println(filePath)
 				}
 			}
 		}
