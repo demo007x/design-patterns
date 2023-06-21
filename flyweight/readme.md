@@ -158,3 +158,5 @@ class Forest is
 - 如果你能将对象的所有共享状态简化为一个享元对象， 那么[享元](https://refactoringguru.cn/design-patterns/flyweight)就和[单例模式](https://refactoringguru.cn/design-patterns/singleton)类似了。 但这两个模式有两个根本性的不同。
   1. 只会有一个单例实体， 但是*享元*类可以有多个实体， 各实体的内在状态也可以不同。
   2. *单例*对象可以是可变的。 享元对象是不可变的。
+
+##  代码示例

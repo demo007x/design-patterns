@@ -215,3 +215,6 @@ class Application is
 - 你可以同时使用[工厂方法模式](https://refactoringguru.cn/design-patterns/factory-method)和[迭代器](https://refactoringguru.cn/design-patterns/iterator)来让子类集合返回不同类型的迭代器， 并使得迭代器与集合相匹配。
 - 你可以同时使用[备忘录模式](https://refactoringguru.cn/design-patterns/memento)和[迭代器](https://refactoringguru.cn/design-patterns/iterator)来获取当前迭代器的状态， 并且在需要的时候进行回滚。
 - 可以同时使用[访问者模式](https://refactoringguru.cn/design-patterns/visitor)和[迭代器](https://refactoringguru.cn/design-patterns/iterator)来遍历复杂数据结构， 并对其中的元素执行所需操作， 即使这些元素所属的类完全不同。
+
+
+##  代码示例
