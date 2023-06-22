@@ -12,7 +12,7 @@
 - [外观模式](./facade/readme.md) 
 - [工厂方法模式](./factory/readme.md) 
 - [享元模式](./flyweight/readme.md) 
-- [2023跟我学设计模式：中介者模式（Intermediary）](./intermediary/readme.md) 
+- [中介者模式（Intermediary）](./intermediary/readme.md) 
 - [迭代器模式](./iterator/readme.md) 
 - [观察者模式](./observer/readme.md) 
 - [原型模式](./prototype/readme.md) 
